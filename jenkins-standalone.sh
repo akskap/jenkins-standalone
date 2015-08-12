@@ -107,7 +107,7 @@ sed -i "s!_MAGIC_JENKINS_URL!http://${HOST}:${PORT}!" jenkins.model.JenkinsLocat
 sed -i "s!_MAGIC_JENKINS_SLAVE_USER!${SLAVE_USER}!" config.xml
 
 # Start the master
-export JENKINS_HOME="$(pwd)"
+export JENKINS_HOME="/var/lib/JenkinsHome"
 java -jar jenkins.war \
     -Djava.awt.headless=true \
     --webroot=war \
